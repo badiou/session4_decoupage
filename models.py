@@ -1,7 +1,8 @@
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-from flask import Flask
+
 
 app=Flask(__name__)
 
@@ -18,6 +19,7 @@ class Etudiant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nom= db.Column(db.String(200))
     prenom= db.Column(db.String(200))
+    email= db.Column(db.String(200))
     
     
 
